@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public record IndividualCustomer(String id, String firstName, String lastName) implements Customer {
     public IndividualCustomer {
-        Objects.requireNonNull(id, "id ne doit pas être null");
-        Objects.requireNonNull(firstName, "Le prénom ne doit pas être null");
-        Objects.requireNonNull(lastName, "Le nom ne doit pas être null");
+        Objects.requireNonNull(id, "id must not be null");
+        Objects.requireNonNull(firstName, "The first name must not be null");
+        Objects.requireNonNull(lastName, "The name must not be null");
     }
 }
