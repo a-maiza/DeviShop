@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
-public class BasketResponseDto {
+public class BasketResponse {
     private BigDecimal highEndPhoneUnitPrice;
     private BigDecimal midRangePhoneUnitPrice;
     private BigDecimal laptopUnitPrice;

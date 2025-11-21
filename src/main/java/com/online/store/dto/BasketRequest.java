@@ -5,7 +5,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 @Data
-public class BasketRequestDto {
+public class BasketRequest {
     private ClientType clientType;
 
     private Long clientId;

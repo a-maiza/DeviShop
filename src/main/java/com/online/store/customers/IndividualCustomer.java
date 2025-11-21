@@ -1,11 +1,13 @@
 package com.online.store.customers;
 
-import java.util.Objects;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-public record IndividualCustomer(String id, String firstName, String lastName) implements Customer {
-    public IndividualCustomer {
-        Objects.requireNonNull(id, "id must not be null");
-        Objects.requireNonNull(firstName, "The first name must not be null");
-        Objects.requireNonNull(lastName, "The name must not be null");
-    }
+import java.util.Objects;
+@Data
+@AllArgsConstructor
+public final class IndividualCustomer implements Customer {
+    private Long id;
+    private String lastName;
+    private String firstName;
 }

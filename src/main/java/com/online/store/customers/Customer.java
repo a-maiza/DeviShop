@@ -1,5 +1,5 @@
 package com.online.store.customers;
 
 public sealed interface Customer permits BusinessCustomer, IndividualCustomer{
-    String id();
+    Long getId();
 }
