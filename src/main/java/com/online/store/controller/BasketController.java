@@ -7,6 +7,8 @@ import com.online.store.dto.BasketRequest;
 import com.online.store.dto.BasketResponse;
 import com.online.store.enums.ClientType;
 import com.online.store.services.BasketService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +19,7 @@ import java.math.BigDecimal;
 
 @RestController
 @RequestMapping("/api/basket")
+@Tag(name = "Basket", description = "API de calcul de panier")
 public class BasketController {
 
     private final BasketService basketService;
@@ -26,6 +29,10 @@ public class BasketController {
     }
 
     @PostMapping("/compute")
+    @Operation(
+            summary = "Calculate the total of the basket",
+            description = "Calculate the cost of the basket for a customer (individual or professional) based on the quantities of products."
+    )
     public ResponseEntity<BasketResponse> computeBasket(@RequestBody BasketRequest request) {
 
         Customer client = mapToClient(request);
