@@ -12,11 +12,11 @@ exemple :
 "clientType": "INDIVIDUAL",
 "clientId": 100,
 "lastName": "maiza",
-"firstName": "abdeldjalil",
+"firstName": "abdel",
 "companyName": "elian consulting",
 "siren": "14144785",
 "intraVatNumber": "54187451",
-"annualTurnover": 100020,
+"annualTurnover": 150020,
 "highEndPhoneQty": 3,
 "midRangePhoneQty": 5,
 "laptopQty": 3
